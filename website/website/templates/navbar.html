@@ -1,5 +1,8 @@
 <div>
-    <span>home</span>
-    <span>about</span>
-    <span>contact</span>
+    {% url 'index' as index_url %}
+    <span>{% if request.path == index_url %}home {% else %}<a href = "{% url 'index' %}">home</a>{% endif %}</span>
+    {% url 'about' as about_url %}
+    <span>{% if request.path == about_url %}about {% else %}<a href = "{% url 'about' %}">about</a>{% endif %}</span>
+    {% url 'contact' as contact_url %}
+    <span>{% if request.path == contact_url %}contact {% else %}<a href = "{% url 'contact' %}">contact</a>{% endif %}</span>
 </div>

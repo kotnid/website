@@ -8,7 +8,7 @@
 
     <span style = "float: right">
         {% if user.is_authenticated %}
-            <span>Hi {{ user.username }} </span>
+            <span> hi {% if request.path == profile_url %}{{ user.username }}{% else %}<a href="{% url 'profile' %}">profile</a>{% endif %}</span>
             <span><a href="{% url 'logout' %}">logout</a></span>
         {% else %}
             <span><a href="{% url 'login' %}">login</a></span> 

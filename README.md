@@ -5,7 +5,7 @@
 ## this is just a training code 
 ### two app : accounts and public  
 ### change html in templates file 
- 
+### test ss 
 ======================================================= 
 
 ## created in 28/06/21  

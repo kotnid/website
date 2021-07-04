@@ -28,6 +28,8 @@ services:
         command : python manage.py migrate
         volumes : *service-volumes   
         environment : *app-variables 
+        depends_on:
+            - postgres
     
     postgres:
         image : postgres
